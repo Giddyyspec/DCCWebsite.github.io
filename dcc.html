@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial=scale=1.0">
+        <title>Dayspring Christian Centre Photo Gallery</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            const images = document.querySelectorAll('.gallery a');
+
+            images.forEach(image=>{
+                image.addEventListener('click', (e) => {
+                 //Trigger the download action
+                 const link = e.currentTarget;
+                 const imgSrc = link.href;
+                 const imageName = imgSrc.substring(imgSrc.lastIndexOf('/') + 1);
+                 link.setAttribute('download', imageName);
+                });
+            });  
+        </script>
+        <img src="images/churchlg.jpg" alt="Church Logo">
+        <section id="event-calendar">
+            <h2>Weekly Activities</h2>
+            <hr>
+            <br>
+            <ul>
+                <li>
+                    <strong>Sunday Worship</strong> - Sundays, 8:30am prompt
+                </li>
+                <br>
+                <li>
+                    <strong>Monday Prayer Meeting</strong> - Mondays, 5:00pm prompt
+                </li>
+                <br>
+                <li>
+                    <strong>Morning Dayspring Visitation</strong> - Tuesdays, 5:30am (Early in the morning)
+                </li>
+                <br>
+                <li>
+                    <strong>Intercessors' Prayer</strong> - Tuesdays, 5:00pm prompt
+                </li>
+                <br>
+                <li>
+                    <strong>Bible Study</strong> - Thursdays, 6:00pm prompt
+                </li>
+            </ul>
+        </section>
+        
+        </section>
+    </head>
+    <body>
+        <header>
+            <h1>Church Photo Gallery</h1>
+        </header>
+        <main>
+            <section id="photo-gallery">
+                <h2>Aperire Photo Gallery</h2>
+                <div class="gallery">
+                    <!--Add your images here-->
+                    <a href="images/aperire1.jpg" download><img src="images/aperire1.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire2.jpg" download><img src="images/aperire2.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire3.jpg" download><img src="images/aperire3.jpg" alt="Sister Bukky"></a>
+                    <a href="images/aperire4.jpg" download><img src="images/aperire4.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire5.jpg" download><img src="images/aperire5.jpg" alt="Bro Kunmi"></a>
+                    <a href="images/aperire6.jpg" download><img src="images/aperire6.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire7.jpg" download><img src="images/aperire7.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire8.jpg" download><img src="images/aperire8.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire9.jpg" download><img src="images/aperire9.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire10.jpg" download><img src="images/aperire10.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperire11.jpg" download><img src="images/aperire11.jpg" alt="Nuel Bassist"></a>
+                    <a href="images/aperirebassnuel.jpg" download><img src="images/aperirebassnuel.jpg" alt="Nuel Bassist"></a>
+                    <a href="images/aperirebassnuel2.jpg" download><img src="images/aperirebassnuel2.jpg" alt="Nuel Bassist"></a>
+                    <a href="images/aperirecaterer.jpg" download><img src="images/aperirecaterer.jpg" alt="Aperire Caterers"></a>
+                    <a href="images/aperirekunmi.jpg" download><img src="images/aperirekunmi.jpg" alt="Bro Kunmi"></a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy;2024 DCC Church Website</p>
+        </footer>
+    </body>
+</html>
